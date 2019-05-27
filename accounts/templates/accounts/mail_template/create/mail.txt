@@ -1,0 +1,8 @@
+{{ user.username }}様
+
+苗字: {{ user.first_name }}
+名前: {{ user.last_name }}
+メールアドレス: {{ user.email }}
+{% if user.is_superuser %}
+あなたは管理者です。
+{% endif %}d

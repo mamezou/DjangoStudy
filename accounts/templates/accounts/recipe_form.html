@@ -1,0 +1,21 @@
+{% extends 'blog/base.html' %}
+{% load crispy_forms_tags %}
+{% block content %}
+{{ form.certifications.errors }}
+    <div class="col-lg-1"></div>
+    <div class="container col-lg-8">
+        <div class="left-container mt-5">
+            <h2 class="text-center">レシピの更新</h2>
+
+            <form method="post"  id="myform">
+                {% csrf_token %}
+                <table>
+                    {%crispy form%}
+                </table>
+                <a class="btn" href="{% url 'blog:recipe' %}">戻る</a>
+                <input type="submit" class="btn" value="更新">
+            </form>
+        </div>
+    </div><!-- /.container -->
+
+{% endblock %}

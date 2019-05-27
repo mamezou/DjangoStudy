@@ -1,0 +1,18 @@
+{% extends 'blog/base.html' %}
+
+{% block content %}
+        <div class="col-lg-1"></div>
+        <div class="container col-lg-8">
+            <div class="left-container">
+                <div class="alert alert-warning" role="alert">
+                    <h4 class="alert-heading mb-3">工事中ですm(._.)m</h4>
+                    <p>お気に入り機能はまだ実装できておりません。</p>
+                    <hr>
+                    <div class="container text-center">
+                        <a href="{% url 'blog:start' %}" class="mb-0 btn mx-2">「はじめに」</a>
+                        <a href="{% url 'blog:index' %}" class="mb-0 btn mx-2">「ホーム」</a>
+                    </div>
+                </div>
+            </div>
+        </div><!-- /.container -->
+{% endblock %}

@@ -1,0 +1,19 @@
+{% extends 'blog/base.html' %}
+
+<!--これはログインしてないときにメンバー情報を見ようといしたら表示されるやーつ-->
+{% block content %}
+        <div class="col-lg-1"></div>
+        <div class="container col-lg-8">
+            <div class="left-container mt-4">
+                <div class="alert alert-light" role="alert">
+                    <h4 class="alert-heading mb-3">ログインしていません!</h4>
+                    <p>ログインまたは新規会員登録をして、色々な料理にチャレンジしてみよう！</p>
+                    <hr>
+                    <div class="container text-center">
+                        <a href="{% url 'blog:login' %}" class="mb-0 btn mx-2">ログイン</a>
+                        <a href="{% url 'blog:user_create' %}" class="mb-0 btn mx-2">新規登録</a>
+                    </div>
+                </div>
+            </div>
+        </div><!-- /.container -->
+{% endblock %}

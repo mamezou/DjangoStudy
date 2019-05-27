@@ -1,0 +1,355 @@
+
+body{
+  background-color: #f8f4e8;
+  height: auto;
+}
+
+.navbar{
+  padding: 0.2rem 0.3rem;
+}
+
+.container {
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
+.header {
+  height: 70px;
+  background-color: #ffe8b7;
+  /* opacity: 0.9; */
+}
+
+
+.header-logo{
+  float: left;
+  width: 20%;
+  height: 100%;
+}
+
+.header-logo img{
+  width: 100%;
+  height: 100%;
+}
+
+.header-navi{
+  float: right;
+  background-color: #ffe8b7;
+}
+
+.header-navi li{
+  float: left;
+  padding:20px 5px 0px 5px;
+}
+
+.header-navi li a{
+  font-size: 16px;
+  display: inline-block;
+}
+
+.dropdown{
+  float: right;
+}
+
+.breadcrumb{
+  background-color: #fff8e6;
+  /* margin: auto; */
+  opacity: 0.9;
+}
+
+.breadcrumb a{
+  color: #797b7e;
+}
+
+.btn {
+  padding: 8px 24px;
+  color: rgb(0, 0, 0);
+  display: inline-block;
+  border-color: #6c757d;
+  opacity: 0.8;
+  border-radius: 4px;
+  text-align: center;
+  background-color: rgb(247, 240, 232);
+}
+
+.btn:hover{
+  background-color: #eccf9c;
+  opacity: 1;
+}
+
+.btnsearch:active{
+  color: #fff;
+  font-weight: 400;
+  transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+
+/* 親要素の指定 */
+.parent{
+  position: relative;
+}
+
+/* 子要素を下に固定 */
+.underfix{
+  /* position: absolute; */
+  bottom: 0.5rem;
+}
+
+.dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+.active{
+  font-weight: bold;
+}
+
+/* ここからindexのメイン */
+/* .home-navi{
+  background-color: #fff;
+} */
+
+
+/* 各ページのレイアウトベース */
+
+.main{
+  padding: 150px 30px 50px 30px;
+  height:auto;
+}
+
+.h3, h3 {
+  font-size: 1.5rem;
+}
+
+.aside{
+  background-color: rgb(255, 254, 233);
+  z-index: 10;
+  border: 1px solid rgb(151, 151, 151);
+  width: 75%;
+  margin:0 auto;
+  border-radius: 2%
+}
+
+.aside h4{
+  text-align: center;
+  letter-spacing: 1px;
+  padding-top: 5px;
+  display: block;
+  padding-bottom: 10px;
+}
+
+.aside h4 a{
+  color: black;
+  font-size: 75%;
+}
+
+.aside li a,h3{
+  display: block;
+  text-align: center;
+  letter-spacing: 1px;
+}
+
+.aside li h3{
+  font-size: 1.25rem;
+  padding-top: 20px;
+  position: relative;
+  width: 100%;
+}
+
+
+.aside h3:first-letter{
+  font-size: 1.1em;
+}
+
+.aside h3:after { /*グラデーションのラインを引く*/
+  content:"";
+  display:block;
+  height:0.8px;
+  width:100%;
+  background: -webkit-linear-gradient(left, #40bfa0 0%,#fef785 82%,#f37b7b 100%);
+  background: linear-gradient(to right, #40bfa0 0%,#fef785 82%,#f37b7b 100%);
+}
+
+.aside li a{
+  color: black;
+  padding-top: 5px;
+}
+
+/* ホーム */
+/* -> 動くやつ */
+.moving{
+  padding-top: 70px;
+  float: right;
+  padding-left: 30px;
+}
+
+.carousel-inner img{
+  border: 1px solid gray;
+  border-radius: 50%;
+}
+
+.carousel-inner h3 p{
+  color: #6c757d;
+}
+
+.category{
+  height: 400px;
+}
+
+/* -> 動くやつの隣説明 */
+.sections{
+  float: left;
+  margin-top: 90px;
+  background-color: #fff;
+  border: 1px solid grey;
+}
+
+.topics{
+  margin-bottom: 10px ;
+}
+
+
+.topics h1 {
+  padding: 0.5em;/*文字周りの余白*/
+  color: #494949;/*文字色*/
+  background: #fffaf4;/*背景色*/
+  border-left: solid 5px #ffaf58;/*左線（実線 太さ 色）*/
+  font-size: 1.1rem;
+}
+
+h2{
+  padding:0.1em;
+  color: #494949;/*文字色*/
+  font-size: 1.1rem;
+  text-align: center;
+}
+
+.textlist{
+  background-color: #fff;
+  opacity: 0.7;
+  border-radius: 1%;
+}
+
+.textlist h3{
+  font-size: 100%;
+}
+
+.textlist h3,p{
+  color: black;
+  font-weight: bold;
+  opacity: 1;
+}
+
+
+.rank{
+  line-height: 1;
+}
+
+.rank h2{
+  padding-top: 0px;
+}
+
+.topics p{
+  font-size: 1rem;
+  text-align: left;
+  margin-bottom: 0;
+}
+
+.topics h1{
+  font-weight: bold;
+}
+
+
+/* はじめに */
+/* はじめに -> ジャンボとろん */
+.jumbotron{
+  /*background-image: url("image:start_3.jpg");*/
+  background-image: url("/static/image/start_3.jpg");
+  background-size: cover;
+  background-position: 60%;
+  position: relative;
+  opacity: 0.9;
+  border: 0.5px solid #6c757d;
+  margin-bottom: 80px;
+}
+
+.jumbotron h2,p{
+  text-align: center;
+}
+
+.jumbotron h2{
+  color: rgb(183, 255, 134);
+  font-weight: bold;
+  letter-spacing: 3px;
+}
+
+.jumbotron p{
+  color: rgb(252, 247, 175);
+  font-size: 150%;
+  line-height: 2;
+  letter-spacing: 1px;
+}
+
+.jumbotron a{
+  margin-top: 40px;
+}
+
+/* ホーム追加コンテンツ */
+.home1{
+  background-image: url("/static/image/sarad.jpg");
+  background-position-y: -5rem;
+  height: 500px;
+  margin-top: 1rem;
+  padding-right: 50px;
+  opacity: 0.9;
+}
+
+
+.title{
+  text-align: center;
+}
+
+/* お知らせ部分 */
+.card .card-header a[data-toggle="collapse"] {
+  display: block;
+  padding: .75rem 1.25rem;
+  margin: -.75rem -1.25rem;
+}
+.card .card-header a[data-toggle="collapse"]:active,
+.card .card-header a[data-toggle="collapse"]:hover,
+.card .card-header a[data-toggle="collapse"]:focus {
+  text-decoration: none;
+}
+
+.steps h4{
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* ここからフッター */
+footer{
+  background-color: #faf1db;
+  height: auto;
+  border-top: 0.5px solid rgb(156, 156, 156);
+}
+
+.footerparent{
+  width: 50%;
+  height: 3rem;
+  position: relative;
+}
+
+.footer-logo{
+  width: 70%;
+  height: auto;
+  padding-top: 5px;
+}
+
+.child{
+  position: absolute;
+  top: 0;
+}
+
+.copyright{
+  height: 100%;
+  padding-top: 1rem;
+}
+
+

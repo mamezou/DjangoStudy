@@ -1,0 +1,72 @@
+{% extends 'blog/base.html' %}
+
+{% block content %}
+        <div class="col-lg-1"></div>
+        <div class="container col-lg-8">
+            <div class="left-container mt-5">
+                <h2 class="my-5">よくある質問</h2>
+                <div class="accordion" id="accordion" role="tablist" aria-multiselectable="true">
+                    <div class="card">
+                        <div class="card-header" role="tab" id="headingOne">
+                            <h5 class="mb-0">
+                                <a class="text-body" data-toggle="collapse" href="#collapseOne" role="button" aria-expanded="true"
+                                    aria-controls="collapseOne">
+                                    Q ユーザー登録できないのですが・・ -> 解決！（2019/3/11）
+                                </a>
+                            </h5>
+                        </div><!-- /.card-header -->
+                        <div id="collapseOne" class="collapse show" role="tabpanel" aria-labelledby="headingOne" data-parent="#accordion">
+                            <div class="card-body">
+                                A.<br>申し訳ありませんが、このWEBサイトは実用レベルには到達しておりませんので、ご了承くださいませ。<br>2019/3/11　念願の会員登録できるようになりました！
+                            </div><!-- /.card-body -->
+                        </div><!-- /.collapse -->
+                    </div><!-- /.card -->
+                    <div class="card">
+                        <div class="card-header" role="tab" id="headingTwo">
+                            <h5 class="mb-0">
+                                <a class="collapsed text-body" data-toggle="collapse" href="#collapseTwo" role="button" aria-expanded="false"
+                                    aria-controls="collapseTwo">
+                                    Q レシピの投稿ができないのですが・・ -> 解決！（2019/3/15）
+                                </a>
+                            </h5>
+                        </div><!-- /.card-header -->
+                        <div id="collapseTwo" class="collapse" role="tabpanel" aria-labelledby="headingTwo" data-parent="#accordion">
+                            <div class="card-body">
+                                A.<br>申し訳ありませんが、このWEBサイトは実用レベルには到達しておりませんので、ご了承くださいませ。<br>2019/3/15  一応、レシピの投稿もできるようになりました！
+                            </div><!-- /.card-body -->
+                        </div><!-- /.collapse -->
+                    </div><!-- /.card -->
+                    <div class="card">
+                        <div class="card-header" role="tab" id="headingThree">
+                            <h5 class="mb-0">
+                                <a class="collapsed text-body" data-toggle="collapse" href="#collapseThree" role="button" aria-expanded="false"
+                                    aria-controls="collapseThree">
+                                    Q ロゴが見にくくダサいのですが・・
+                                </a>
+                            </h5>
+                        </div><!-- /.card-header -->
+                        <div id="collapseThree" class="collapse" role="tabpanel" aria-labelledby="headingThree" data-parent="#accordion">
+                            <div class="card-body">
+                                A.<br>言い訳させてください、時間がなかったんです。あと、デザインセンスを持ち合わせておりません。何卒、お許しください。
+                            </div><!-- /.card-body -->
+                        </div><!-- /.collapse -->
+                    </div><!-- /.card -->
+                    <div class="card">
+                        <div class="card-header" role="tab" id="headingFour">
+                            <h5 class="mb-0">
+                                <a class="collapsed text-body" data-toggle="collapse" href="#collapseFour" role="button" aria-expanded="false"
+                                    aria-controls="collapseTwo">
+                                    Q 検索とかできないんですか？
+                                </a>
+                            </h5>
+                        </div><!-- /.card-header -->
+                        <div id="collapseFour" class="collapse" role="tabpanel" aria-labelledby="headingFour" data-parent="#accordion">
+                            <div class="card-body">
+                                A.<br>それほどレシピは投稿されていないかと思います。<br>はい、ごめんなさい。時間の能力の不足によるものです。
+                            </div><!-- /.card-body -->
+                        </div><!-- /.collapse -->
+                    </div><!-- /.card -->
+                </div><!-- /#accordion -->
+            </div>
+        </div><!-- /.container -->
+{% endblock %}

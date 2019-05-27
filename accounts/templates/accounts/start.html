@@ -1,0 +1,66 @@
+{% extends 'blog/base.html' %}
+{% load static%}
+{% block content %}
+        <div class="container col-lg-9">
+            <div class="left-container">
+                <div class="jumbotron">
+                    <h2 class="display-4 text-monospace">WELCOME!!</h2>
+                    <p class="lead font-weight-bold">ベジタリアン専用のレシピサイトへようこそ！<br>このWEBサイトはベジタリアンやビーガンを始め、<br>生き物を食べない人に贈るレシピサイトです。</p>
+                    <p><a class="btn font-weight-bold" href="{% url 'blog:recipe_create' %}" role="button">早速レシピを書いてみる</a></p>
+                </div><!-- /.jumbotron -->
+                <h3>ー偉人たちの名言ー</h3>
+                <div class="card mb-2">
+                    <div class="card-body">
+                        <p class="card-text">One should not kill living being, nor cause it to be killd, nor should one incite another to kill<br>Do not injure any being, either strong or weak, in the world.</p>
+                        <blockquote class="blockquote">
+                            <p>生き物を殺したり、殺される原因を作ったり、誰かを煽って殺させる事なかれ。<br>世の如何なる生き物も、強きものも弱きものも傷つける事なかれ。</p>
+                            <p class="blockquote-footer text-right">釈迦－<cite title="Wikipedia">Wikipediaより</cite></p>
+                        </blockquote>
+                    </div>
+                </div>
+                <div class="card mb-5">
+                    <div class="card-body">
+                        <p class="card-text">The day will come when men such as I will look upon<br>the murder of animals as they now
+                            look upon the murder of men.</p>
+                        <blockquote class="blockquote">
+                            <p>人は、動物の殺害を人殺しと同じに見る私のような人間になる日が来るだろう。</p>
+                            <p class="blockquote-footer text-right">レオナルド・ダ・ヴィンチ－<cite title="Wikipedia">Wikipediaより</cite></p>
+                        </blockquote>
+                    </div>
+                </div>
+            </div>
+            <h3 class="pt-5">ーイチオシレシピー</h3>
+            <div class="card-group mb-5">
+                <div class="card">
+                    <img class="card-img-top" src="{% static 'image/pineapple.JPG'%}" alt="カード1の画像">
+                    <div class="card-body">
+                        <h4 class="card-title">パイナップルチャーハン</h4>
+                        <p class="card-text">パイナップルを丸ごと使用し、チャーハンの上に焼いたズッキーニとアスパラガスを載せた贅沢な逸品。ハワイでは鉄板の大人気メニュー。ココナッツカレーとサラダを添えてどうぞ！</p>
+                    </div>
+                    <div class="card-footer">
+                        <a href="#" class="btn">レシピを見る</a>
+                    </div>
+                </div>
+                <div class="card">
+                    <img class="card-img-top" src="{% static 'image/IMG_1704.jpg'%}" alt="カード2の画像">
+                    <div class="card-body">
+                        <h4 class="card-title">台湾風春巻き</h4>
+                        <p class="card-text">フルーツ入りのサラダに乗った、春巻きのサクッと感がたまりません。色鮮やかなメニューで食卓を華やかに演出してくれるはずです！</p>
+                    </div>
+                    <div class="card-footer">
+                        <a href="#" class="btn">レシピを見る</a>
+                    </div>
+                </div>
+                <div class="card">
+                    <img class="card-img-top" src="{% static 'image/IMG_1448.jpg'%}" alt="カード3の画像">
+                    <div class="card-body">
+                        <h4 class="card-title">大豆の照り焼きチキン風</h4>
+                        <p class="card-text">食感はまるでお肉のよう！しっかりした味付けで食が進みます！メインディッシュにもサブにも回せる、サラダとともにどうぞ！</p>
+                    </div>
+                    <div class="card-footer">
+                        <a href="#" class="btn">レシピを見る</a>
+                    </div>
+                </div>
+            </div>
+        </div><!-- /.container -->
+{% endblock %}

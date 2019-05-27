@@ -1,0 +1,34 @@
+{% extends 'blog/base.html' %}
+
+{% block content %}
+        <div class="col-lg-1"></div>
+        <div class="container col-lg-8">
+            <div class="left-container mt-5">
+                <form action="{% url 'blog:login' %}" method="POST">
+                     {{ form.non_field_errors }}
+                     {% for field in form %}
+                        {{ field }}
+                        {{ field.errors }}
+                    <hr>
+                    {% endfor %}
+                    <button type="submit" class="btn">ログイン</button>
+                    <input type="hidden" name="next" value="{{ next }}" />
+                    {% csrf_token %}
+                </form>
+                <div class="alert mt-5" role="alert">
+                    <h4 class="mb-3 text-center">会員登録はこちら!</h4>
+                    <hr>
+                    <div class="container text-center">
+                        <a href="{% url 'blog:user_create' %}" class="mb-0 btn mx-2">新規登録</a>
+                    </div>
+                </div>
+                <div class="alert mt-5" role="alert">
+                    <h4 class="mb-3 text-center">パスワードを忘れた方はこちら</h4>
+                    <hr>
+                    <div class="container text-center">
+                        <a href="{% url 'blog:password_reset' %}" class="mb-0 btn mx-2">再設定する</a>
+                    </div>
+                </div>
+            </div>
+        </div><!-- /.container -->
+{% endblock %}

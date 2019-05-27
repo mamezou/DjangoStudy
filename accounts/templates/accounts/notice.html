@@ -1,0 +1,110 @@
+{% extends 'blog/base.html' %}
+
+{% block content %}
+        <div class="col-lg-1"></div>
+        <div class="container col-lg-8">
+            <div class="left-container">
+                <div class="alert alert-info my-4" role="alert">
+                    <button type="button" class="close" data-dismiss="alert" aria-label="閉じる">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                    <h4 class="alert-heading mb-3 text-center">お久しぶりの課題発表です！</h4>
+                    <p>バックエンドも途中まで実装しました！<br>(2019/3/15)</p>
+                </div>
+            </div>
+            <div class="accordion mt-5" id="accordion" role="tablist" aria-multiselectable="true">
+                <div class="card">
+                    <div class="card-header" role="tab" id="headingOne">
+                        <h5 class="mb-0">
+                            <a class="text-body" data-toggle="collapse" href="#collapseOne" role="button" aria-expanded="true"
+                                aria-controls="collapseOne">
+                                README
+                            </a>
+                        </h5>
+                    </div><!-- /.card-header -->
+                    <div id="collapseOne" class="collapse show" role="tabpanel" aria-labelledby="headingOne" data-parent="#accordion">
+                        <div class="card-body">
+                            <p>ー開発環境ー</p>
+                            <p>使用本体：MacBook Pro (13-inch, 2017)</p>
+                            <p>プロセッサ： 3.1GHz Intel Core i5</p>
+                            <p>メモリ： 8GB</p>
+                            <br>
+                            <p>ー使用ツールー</p>
+                            <p>IDE： Pycharm</p>
+                            <p>設計： 紙</p>
+                            <p>フレームワーク： Django</p>
+                            <br>
+                            <p>ー学習期間ー</p>
+                            <p>2/18 〜 3/1 (10日間)</p>
+                            <br>
+                            <p>ー開発期間ー</p>
+                            <p>3/4 〜 3/15 (10日間)</p>
+                            <br>
+                            <p>ー開発範囲ー</p>
+                            <p>サーバーサイド途中まで</p>
+                        </div><!-- /.card-body -->
+                    </div><!-- /.collapse -->
+                </div><!-- /.card -->
+                <div class="card">
+                    <div class="card-header" role="tab" id="headingTwo">
+                        <h5 class="mb-0">
+                            <a class="collapsed text-body" data-toggle="collapse" href="#collapseTwo" role="button" aria-expanded="false"
+                                aria-controls="collapseTwo">
+                                INPRESSION
+                            </a>
+                        </h5>
+                    </div><!-- /.card-header -->
+                    <div id="collapseTwo" class="collapse" role="tabpanel" aria-labelledby="headingTwo" data-parent="#accordion">
+                        <div class="card-body">
+                            <p>ー感想ー</p>
+                            <p>・エラーのオンパレードだった・・。</p>
+                            <p>・とても良い経験になった。</p>
+                            <br>
+                            <p>ー良かった点ー</p>
+                            <p>・PythonとDjangoとフレームワークについてだいぶと理解することができた。</p>
+                            <p>・調べる力、問題解決能力が養われた。</p>
+                            <p>・色々と試すことができた。</p>
+                            <br>
+                            <p>ー反省点ー</p>
+                            <p>・設計が疎かになってしまい、頭の整理がつかない時があった。</p>
+                            <p>・機能ごとにディレクトリを変えることができなかった。</p>
+                            <br>
+                            <p>ー改善策ー</p>
+                            <p>・一つずつ実装していくこと。</p>
+                            <p>・こまめに動作チェックすること</p>
+                            <p>・設計にもっと時間を取ること</p>
+                            <br>
+                        </div><!-- /.card-body -->
+                    </div><!-- /.collapse -->
+                </div><!-- /.card -->
+                <div class="card">
+                    <div class="card-header" role="tab" id="headingThree">
+                        <h5 class="mb-0">
+                            <a class="collapsed text-body" data-toggle="collapse" href="#collapseThree" role="button" aria-expanded="false"
+                                aria-controls="collapseThree">
+                                Development Steps
+                            </a>
+                        </h5>
+                    </div><!-- /.card-header -->
+                    <div id="collapseThree" class="collapse" role="tabpanel" aria-labelledby="headingThree" data-parent="#accordion">
+                        <div class="card-body steps">
+                            <h4>学習期間（10日間）2/18 ~ 3/1</h4>
+                            <p>・Pythonの絵本</p>
+                            <p>・Pythonエキスパートプログラミング</p>
+                            <p>・Gitの学習</p>
+                            <p>・Schoo受講「Python実践編」「ディープラーニング実践」</p>
+                            <p>・サンプルアプリケーションの作成（メモ、投票、名簿 etc..）</p>
+                            <br>
+                            <h4>開発期間（10日間）3/4 ~ 3/15</h4>
+                            <p>・ユーザー周りの機能の実装</p>
+                            <p>新規登録、メールでの本登録機能、会員情報閲覧,変更 etc..</p>
+                            <br>
+                            <p>・レシピ投稿機能</p>
+                            <p>model , view , form , urls .......etc..</p>
+                            <br>
+                        </div><!-- /.card-body -->
+                    </div><!-- /.collapse -->
+                </div><!-- /.card -->
+            </div><!-- /#accordion -->
+        </div><!-- /.container -->
+{% endblock %}

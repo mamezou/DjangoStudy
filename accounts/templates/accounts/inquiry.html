@@ -1,0 +1,27 @@
+{% extends 'blog/base.html' %}
+{% load crispy_forms_tags %}
+{% block content %}
+{{ form.certifications.errors }}
+        <div class="col-lg-1"></div>
+        <div class="container col-lg-8">
+            <div class="left-container mt-4">
+                <h2 class="mb-4">お問い合わせ</h2>
+                <form action='' method='post'>
+                    {% csrf_token %}
+                    <table>
+                        {%crispy form%}
+                    </table>
+                    <div class="form-group">
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="invalidCheck2" required>
+                            <label class="form-check-label" for="invalidCheck2">
+                                利用規約に同意する
+                            </label>
+                        </div>
+                    </div>
+
+                    <input type="submit" class="btn" value="フォームを送信">
+                </form>
+            </div>
+        </div><!-- /.container -->
+{% endblock %}

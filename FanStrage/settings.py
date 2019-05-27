@@ -25,7 +25,7 @@ SECRET_KEY = 'zzh_$z+%l5p@9&jon-o)y3y3^6hj@9gyn8j1v%+i7a$f7g3qg*'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['127.0.0.1', '.pythonanywhere.com']
 
 
 # Application definition
@@ -37,7 +37,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'accounts',
+    'accounts.apps.AccountsConfig',
+    'crispy_forms',
 ]
 
 MIDDLEWARE = [
@@ -122,29 +123,29 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/2.1/howto/static-files/
 
 STATIC_URL = '/static/'
-# STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
 
 # ログイン機能を拡張
-# AUTH_USER_MODEL = 'blog.User'
+AUTH_USER_MODEL = 'accounts.User'
 
 # ログイン画面の自作
-# LOGIN_URL = 'blog:login'
-# LOGIN_REDIRECT_URL = 'blog:index'
+LOGIN_URL = 'accounts:login'
+LOGIN_REDIRECT_URL = 'accounts:index'
 
 # メールをコンソールに表示する
-# EMAIL_HOST = 'smtp.gmail.com'
-# EMAIL_PORT = 587
-# EMAIL_HOST_USER = 'yuki.sengoku@gmail.com'
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_PORT = 587
+EMAIL_HOST_USER = 'yuki.sengoku@gmail.com'
 # 二段階認証で作成したパスワード
-# EMAIL_HOST_PASSWORD = 'jzkbbraiyqvepidr'
-# EMAIL_USE_TLS = True
+EMAIL_HOST_PASSWORD = 'jzkbbraiyqvepidr'
+EMAIL_USE_TLS = True
 
 # メール送信のテスト用
 # EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 
 # django-crispy-forms 設定
-# CRISPY_TEMPLATE_PACK = 'bootstrap4'
+CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
 # 画像アップロード用
 # MEDIA_ROOT = os.path.join(BASE_DIR, 'media')

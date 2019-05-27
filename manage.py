@@ -1,6 +1,7 @@
 #!/usr/bin/env python
 import os
 import sys
+# 以下、二行はSQLとの接続。
 import pymysql
 pymysql.install_as_MySQLdb()
 
