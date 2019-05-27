@@ -1,4 +1,4 @@
-{% extends 'blog/base.html' %}
+{% extends 'accounts/base.html' %}
 {% block content %}
     <div class="col-lg-1"></div>
     <div class="container col-lg-8 mt-5">
@@ -8,9 +8,9 @@
               {% include "./recipe_detail_contents.html" %}
             </div>
             <div class="card-footer text-center">
-                <a class="btn btn-primary" href="{% url 'blog:recipe_update' object.pk %}">修正</a>
-                <a class="btn btn-danger" href="{% url 'blog:recipe_delete' object.pk %}">削除</a>
-                <a class="btn" href="{% url 'blog:recipe' %}">戻る</a>
+                <a class="btn btn-primary" href="{% url 'accounts:recipe_update' object.pk %}">修正</a>
+                <a class="btn btn-danger" href="{% url 'accounts:recipe_delete' object.pk %}">削除</a>
+                <a class="btn" href="{% url 'accounts:recipe' %}">戻る</a>
             </div>
         </div>
     </div>

@@ -1,4 +1,4 @@
-{% extends 'blog/base.html' %}
+{% extends 'accounts/base.html' %}
 
 {% block content %}
         <div class="col-lg-1"></div>
@@ -27,10 +27,10 @@
                     </tbody>
                 </table>
                 <div class="container mt-5 text-center">
-                        <a href="{% url 'blog:user_update' user.pk %}" class="mb-0 btn mx-2">登録内容変更</a>
+                        <a href="{% url 'accounts:user_update' user.pk %}" class="mb-0 btn mx-2">登録内容変更</a>
                 </div>
                 <div class="container mt-5 text-center">
-                        <a href="{% url 'blog:password_change' %}" class="mb-0 btn mx-2">パスワード変更</a>
+                        <a href="{% url 'accounts:password_change' %}" class="mb-0 btn mx-2">パスワード変更</a>
                 </div>
             </div>
         </div><!-- /.container -->

@@ -100,7 +100,7 @@ if settings.AUTH_USER_MODEL == 'accounts.User':
 # 投稿機能のデータベースです。
 class Post(models.Model):
     """
-   　レシピクラス
+   　投稿クラス
     """
 
     title = models.CharField(

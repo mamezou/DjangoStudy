@@ -1,4 +1,4 @@
-{% extends 'blog/base.html' %}
+{% extends 'accounts/base.html' %}
 
 <!--これはログインしてないときにメンバー情報を見ようといしたら表示されるやーつ-->
 {% block content %}
@@ -10,8 +10,8 @@
                     <p>ログインまたは新規会員登録をして、色々な料理にチャレンジしてみよう！</p>
                     <hr>
                     <div class="container text-center">
-                        <a href="{% url 'blog:login' %}" class="mb-0 btn mx-2">ログイン</a>
-                        <a href="{% url 'blog:user_create' %}" class="mb-0 btn mx-2">新規登録</a>
+                        <a href="{% url 'accounts:login' %}" class="mb-0 btn mx-2">ログイン</a>
+                        <a href="{% url 'accounts:user_create' %}" class="mb-0 btn mx-2">新規登録</a>
                     </div>
                 </div>
             </div>

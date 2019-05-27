@@ -1,4 +1,4 @@
-{% extends 'blog/base.html' %}
+{% extends 'accounts/base.html' %}
 
 {% block content %}
         <div class="col-lg-1"></div>
@@ -13,7 +13,7 @@
                             <div class="card-body">
                                 <h3 class="card-title">{{ item }}</h3>
                                 <p class="card-text">{{ item.subtitle }}</p>
-                                <p class="card-text underfix"><small class="text-muted mr-2">{{ item.created_at }}</small><a class="btn" href="{% url 'blog:recipe_detail' item.pk %}">もっと見る</a></p>
+                                <p class="card-text underfix"><small class="text-muted mr-2">{{ item.created_at }}</small><a class="btn" href="{% url 'accounts:recipe_detail' item.pk %}">もっと見る</a></p>
                             </div>
                         </div>
                         {% empty %}
@@ -27,7 +27,7 @@
                 <div class="row mt-5">
                     <div class="col-12">
                         <div class="text-center mt-2 mb-3">
-                            <a class="btn" href="{% url 'blog:recipe_create' %}">レシピをかく</a>
+                            <a class="btn" href="{% url 'accounts:recipe_create' %}">レシピをかく</a>
                         </div>
                     </div>
                 </div>

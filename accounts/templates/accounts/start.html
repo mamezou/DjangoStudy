@@ -1,4 +1,4 @@
-{% extends 'blog/base.html' %}
+{% extends 'accounts/base.html' %}
 {% load static%}
 {% block content %}
         <div class="container col-lg-9">
@@ -6,7 +6,7 @@
                 <div class="jumbotron">
                     <h2 class="display-4 text-monospace">WELCOME!!</h2>
                     <p class="lead font-weight-bold">ベジタリアン専用のレシピサイトへようこそ！<br>このWEBサイトはベジタリアンやビーガンを始め、<br>生き物を食べない人に贈るレシピサイトです。</p>
-                    <p><a class="btn font-weight-bold" href="{% url 'blog:recipe_create' %}" role="button">早速レシピを書いてみる</a></p>
+                    <p><a class="btn font-weight-bold" href="{% url 'accounts:recipe_create' %}" role="button">早速レシピを書いてみる</a></p>
                 </div><!-- /.jumbotron -->
                 <h3>ー偉人たちの名言ー</h3>
                 <div class="card mb-2">
