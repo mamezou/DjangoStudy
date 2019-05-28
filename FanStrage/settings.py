@@ -137,16 +137,8 @@ AUTH_USER_MODEL = 'accounts.User'
 LOGIN_URL = 'accounts:login'
 LOGIN_REDIRECT_URL = 'accounts:index'
 
-# メールをコンソールに表示する
-EMAIL_HOST = 'smtp.gmail.com'
-EMAIL_PORT = 587
-EMAIL_HOST_USER = 'yuki.sengoku@gmail.com'
-# 二段階認証で作成したパスワード
-EMAIL_HOST_PASSWORD = 'jzkbbraiyqvepidr'
-EMAIL_USE_TLS = True
-
 # メール送信のテスト用
-# EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 
 # django-crispy-forms 設定
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
