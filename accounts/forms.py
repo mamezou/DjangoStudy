@@ -81,7 +81,7 @@ class MySetPasswordForm(SetPasswordForm):
 
 
 class PostCreateForm(forms.ModelForm):
-
+    """"投稿機能フォーム」"""
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
         for field in self.fields.values():
@@ -91,11 +91,6 @@ class PostCreateForm(forms.ModelForm):
         model = Post
         fields = '__all__'
 
-
-# これがモデルフォームセット
-# RecipeCreateFormSet = forms.modelformset_factory(
-#     Recipe, form=RecipeCreateForm, extra=3
-# )
 
 class ContactForm(forms.Form):
     name = forms.CharField(label='お名前', required=True,

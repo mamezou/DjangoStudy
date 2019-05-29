@@ -8,7 +8,7 @@ from django.utils import timezone
 from django.contrib.auth.base_user import BaseUserManager
 
 # ここから下はユーザー認証周りの実装です。
-# blogのUserモデルを使う場合だけ、登録する
+# accountsのUserモデルを使う場合だけ、登録する
 if settings.AUTH_USER_MODEL == 'accounts.User':
     class UserManager(BaseUserManager):
         """ユーザーマネージャー"""
@@ -106,14 +106,14 @@ class Post(models.Model):
     title = models.CharField(
         verbose_name='タイトル',
         max_length=20,
-        blank=True,
-        null=True,
+        blank=False,
+        null=False,
     )
 
     material = models.TextField(
         verbose_name='本文',
-        blank=True,
-        null=True,
+        blank=False,
+        null=False,
     )
 
     category_choice = (
@@ -129,9 +129,12 @@ class Post(models.Model):
         null=True,
     )
 
-    # image = models.ImageField(
-    #     upload_to='static/image/'
-    # )
+    image = models.ImageField(
+        upload_to='static/image/',
+        verbose_name='画像',
+        blank=True,
+        null=True,
+    )
 
     date = models.DateTimeField(
         '日付',

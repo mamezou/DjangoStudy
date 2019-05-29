@@ -11,18 +11,18 @@
         crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="{% static 'accounts/css/style.css' %}">
     {% block extra_css %}{% endblock %}
-    <title>{% block title %}Fan Strage{% endblock %}</title>
+    <title>{% block title %}Fan Storage{% endblock %}</title>
 </head>
 <body>
     <!-- ここからヘッダー -->
     <header>
         <div class="fixed-top header">
-            <a href="{% url 'accounts:index' %}" class="header-logo navbar mr-3"><img src="{% static 'image/logo.png'%}" alt="BEZI RECIPE"></a>
+            <a href="{% url 'accounts:index' %}" class="header-logo navbar mr-3"><img src="{% static 'image/#'%}" alt="FanStorage"></a>
             <nav class="navbar navbar-light">
                 {% block header %}
                 <ul class="header-navi">
                     <li><a class="navbar-brand" href="{% url 'accounts:favorite' %}"><span><i class="far fa-star fa-fw"></i></span>お気に入り</a></li>
-                    <li><a class="navbar-brand" href="{% url 'accounts:recipe' %}"><span><i class="far fa-edit fa-fw"></i></span>みんなのレシピ</a></li>
+                    <li><a class="navbar-brand" href="{% url 'accounts:recipe' %}"><span><i class="far fa-edit fa-fw"></i></span>みんなの投稿</a></li>
                     <!--ここからif文。ログイン時とログアウト時で表示を変える。-->
                     {% if user.is_authenticated %}
                     <li><a class="navbar-brand" href="{% url 'accounts:user_detail' user.pk %}"><span><i class="far fa-user-circle fa-fw"></i></span>会員情報</a></li>
@@ -34,7 +34,7 @@
                 </ul>
                 {% endblock %}
                 <form class="form-inline">
-                    <input class="form-control mr-sm-2" type="text" placeholder="料理名・食材名">
+                    <input class="form-control mr-sm-2" type="text" placeholder="チームを探す">
                     <button class="btn btnsearch" type="submit">検索</button>
                 </form>
             </nav>
@@ -44,9 +44,9 @@
                     カテゴリから
                 </button>
                 <div class="dropdown-menu">
-                    <a class="dropdown-item" href="#!">ご飯もの</a>
-                    <a class="dropdown-item" href="#!">麺類</a>
-                    <a class="dropdown-item" href="#!">スイーツ</a>
+                    <a class="dropdown-item" href="#!">ジャンル別</a>
+                    <a class="dropdown-item" href="#!">人気別</a>
+                    <a class="dropdown-item" href="#!">オススメ</a>
                 </div>
             </div>
             <!-- パンくずリスト -->
@@ -92,13 +92,13 @@
             <div class="aside sticky-top py-5">
                 <h4><a href="{% url 'accounts:index' %}">ホーム</a></h4>
                 <h4><a href="{% url 'accounts:start' %}">はじめに</a></h4>
-                <h3>レシピ関連</h3>
+                <h3>投稿関連</h3>
                 <ul>
-                    <li><a href="{% url 'accounts:recipe' %}">みんなのレシピ</a></li>
+                    <li><a href="{% url 'accounts:recipe' %}">みんなの投稿</a></li>
                     <li><a href="{% url 'accounts:category' %}">カテゴリ詳細</a></li>
                     <li><a href="{% url 'accounts:ranking' %}">ランキング</a></li>
                     <li><a href="{% url 'accounts:recommended' %}">おすすめ</a></li>
-                    <li><a href="{% url 'accounts:recipe_create' %}">レシピを書く</a></li>
+                    <li><a href="{% url 'accounts:recipe_create' %}">投稿</a></li>
                 </ul>
                 <h3>その他</h3>
                 <ul>
@@ -125,9 +125,9 @@
     <footer class="text-center text-muted">
         <div class="container footerparent">
             <div class="footer-logo child">
-                <a href="{% url 'accounts:index' %}" class="header-logo"><img src="{% static 'image/logo.png'%}" alt="BEZI RECIPE"></a>
+                <a href="{% url 'accounts:index' %}" class="header-logo"><img src="{% static 'image/#'%}" alt="FanStorage"></a>
             </div>
-            <div class="copyright"><small>&copy; 2019 RECIPE CITE by,Yuki Tanaka</small></div>
+            <div class="copyright"><small>&copy; 2019 FanStorage by,Yuki Tanaka</small></div>
             <div class="footer-navi">
             </div>
         </div>

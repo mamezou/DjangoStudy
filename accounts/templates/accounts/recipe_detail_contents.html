@@ -1,7 +1,7 @@
 
 <div class="row mb-3">
     <div class="col-5 col-sm-3">
-        <p class="text-left">レシピ名</p>
+        <p class="text-left">タイトル</p>
     </div>
     <div class="col-7 col-sm-9">
         <p>{{ recipe.title|default_if_none:"未入力" }}</p>
@@ -18,14 +18,6 @@
     </div>
 </div>
 
-<div class="row mb-3">
-    <div class="col-5 col-sm-3">
-        <p class="text-left">材料</p>
-    </div>
-    <div class="col-7 col-sm-9">
-        <p>{{  recipe.material|default_if_none:"未入力"  }}</p>
-    </div>
-</div>
 
 <div class="row mb-3">
     <div class="col-5 col-sm-3">
@@ -35,6 +27,7 @@
         <p>{{ recipe.created_by.get_full_name }}</p>
     </div>
 </div>
+
 <div class="row mb-3">
     <div class="col-5 col-sm-3">
         <p class="text-left">作成時間</p>

@@ -1,6 +1,5 @@
 
 body{
-  background-color: #f8f4e8;
   height: auto;
 }
 
@@ -15,7 +14,6 @@ body{
 
 .header {
   height: 70px;
-  background-color: #ffe8b7;
   /* opacity: 0.9; */
 }
 
@@ -33,7 +31,6 @@ body{
 
 .header-navi{
   float: right;
-  background-color: #ffe8b7;
 }
 
 .header-navi li{
@@ -51,7 +48,7 @@ body{
 }
 
 .breadcrumb{
-  background-color: #fff8e6;
+  background-color: ;
   /* margin: auto; */
   opacity: 0.9;
 }
@@ -68,16 +65,13 @@ body{
   opacity: 0.8;
   border-radius: 4px;
   text-align: center;
-  background-color: rgb(247, 240, 232);
 }
 
 .btn:hover{
-  background-color: #eccf9c;
   opacity: 1;
 }
 
 .btnsearch:active{
-  color: #fff;
   font-weight: 400;
   transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
 }
@@ -119,7 +113,7 @@ body{
 }
 
 .aside{
-  background-color: rgb(255, 254, 233);
+  background-color: rgb(fff);
   z-index: 10;
   border: 1px solid rgb(151, 151, 151);
   width: 75%;
@@ -197,7 +191,6 @@ body{
 .sections{
   float: left;
   margin-top: 90px;
-  background-color: #fff;
   border: 1px solid grey;
 }
 
@@ -261,7 +254,7 @@ h2{
 /* はじめに -> ジャンボとろん */
 .jumbotron{
   /*background-image: url("image:start_3.jpg");*/
-  background-image: url("/static/image/start_3.jpg");
+  background-image: url("/static/image/#");
   background-size: cover;
   background-position: 60%;
   position: relative;
@@ -293,7 +286,7 @@ h2{
 
 /* ホーム追加コンテンツ */
 .home1{
-  background-image: url("/static/image/sarad.jpg");
+  background-image: url("/static/image/#");
   background-position-y: -5rem;
   height: 500px;
   margin-top: 1rem;
@@ -325,7 +318,6 @@ h2{
 
 /* ここからフッター */
 footer{
-  background-color: #faf1db;
   height: auto;
   border-top: 0.5px solid rgb(156, 156, 156);
 }
