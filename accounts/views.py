@@ -240,7 +240,7 @@ class PostListView(generic.ListView):
     """
     model = Post
     template_name = 'accounts/post.html'
-    paginate_by = 3
+    paginate_by = 5
 
 
 class PostDetailView(generic.DetailView):

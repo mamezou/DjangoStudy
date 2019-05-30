@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'accounts.apps.AccountsConfig',
     'crispy_forms',
     'bootstrap4',
+    'django_cleanup',
 ]
 
 MIDDLEWARE = [
