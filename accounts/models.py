@@ -203,23 +203,41 @@ class Post(models.Model):
 #    title
 #    opponent
 #    score
-#    (opponentscore)
+#    (opponentScore)
 #    text
 #    image
 #     """
 #
 #     title = models.CharField(
 #         verbose_name='タイトル',
-#         max_length=20,
+#         max_length=15,
 #         blank=False,
 #         null=False,
 #     )
 #
-#     team = models.TextField(
-#         verbose_name='本文',
+#     opponent = models.TextField(
+#         verbose_name='対戦チーム',
 #         blank=False,
 #         null=False,
 #     )
+#
+    # score = models.SmallIntegerField(
+    #     verbose_name='成績',
+    #     blank=False,
+    #     null=False,
+    # )
+    #
+    # opponentScore = models.SmallIntegerField(
+    #     verbose_name='対戦相手成績',
+    #     blank=False,
+    #     null=False,
+    # )
+    #
+    # text = models.TextField(
+    #     verbose_name='内容',
+    #     blank=False,
+    #     null=False,
+    # )
 #
 #     image = models.ImageField(
 #         upload_to='static/image/',
