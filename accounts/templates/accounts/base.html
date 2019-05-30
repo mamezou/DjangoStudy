@@ -22,7 +22,7 @@
                 {% block header %}
                 <ul class="header-navi">
                     <li><a class="navbar-brand" href="{% url 'accounts:favorite' %}"><span><i class="far fa-star fa-fw"></i></span>お気に入り</a></li>
-                    <li><a class="navbar-brand" href="{% url 'accounts:recipe' %}"><span><i class="far fa-edit fa-fw"></i></span>みんなの投稿</a></li>
+                    <li><a class="navbar-brand" href="{% url 'accounts:post' %}"><span><i class="far fa-edit fa-fw"></i></span>みんなの投稿</a></li>
                     <!--ここからif文。ログイン時とログアウト時で表示を変える。-->
                     {% if user.is_authenticated %}
                     <li><a class="navbar-brand" href="{% url 'accounts:user_detail' user.pk %}"><span><i class="far fa-user-circle fa-fw"></i></span>会員情報</a></li>
@@ -94,11 +94,11 @@
                 <h4><a href="{% url 'accounts:start' %}">はじめに</a></h4>
                 <h3>投稿関連</h3>
                 <ul>
-                    <li><a href="{% url 'accounts:recipe' %}">みんなの投稿</a></li>
+                    <li><a href="{% url 'accounts:post' %}">みんなの投稿</a></li>
                     <li><a href="{% url 'accounts:category' %}">カテゴリ詳細</a></li>
                     <li><a href="{% url 'accounts:ranking' %}">ランキング</a></li>
                     <li><a href="{% url 'accounts:recommended' %}">おすすめ</a></li>
-                    <li><a href="{% url 'accounts:recipe_create' %}">投稿</a></li>
+                    <li><a href="{% url 'accounts:post_create' %}">投稿</a></li>
                 </ul>
                 <h3>その他</h3>
                 <ul>

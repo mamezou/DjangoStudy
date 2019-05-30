@@ -8,12 +8,12 @@
         {% csrf_token %}
         <div class="card card-default">
             <div class="card-body">
-              {% include "./recipe_detail_contents.html" %}
+              {% include "./post_detail_contents.html" %}
             </div>
             <div class="card-footer text-center">
                 <p>このデータを削除します。よろしいですか？</p>
                 <p>{{ object }} のレシピを削除していいですか?</p>
-                <a class="btn" href="{% url 'accounts:recipe' %}">戻る</a>
+                <a class="btn" href="{% url 'accounts:post' %}">戻る</a>
                 <input type="submit" class="btn delete" value="削除">
             </div>
         </div>

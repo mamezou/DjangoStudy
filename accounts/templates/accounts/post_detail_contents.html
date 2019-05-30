@@ -1,0 +1,55 @@
+
+<div class="row mb-3">
+    <div class="col-5 col-sm-3">
+        <p class="text-left">タイトル</p>
+    </div>
+    <div class="col-7 col-sm-9">
+        <p>{{ post.title|default_if_none:"未入力" }}</p>
+    </div>
+</div>
+
+<div class="row mb-3">
+    <div class="col-5 col-sm-3">
+        <p class="text-left">内容</p>
+    </div>
+    <div class="col-7 col-sm-9">
+        <p>{{ post.material|default_if_none:"未入力" }}</p>
+    </div>
+</div>
+
+<div class="row mb-3">
+    <div class="col-5 col-sm-3">
+        <p class="text-left">内容</p>
+    </div>
+    <div class="col-7 col-sm-9">
+        <p>{{ post.image|default_if_none:"未入力" }}</p>
+    </div>
+</div>
+
+<!--<div class="row mb-3">-->
+    <!--<div class="col-5 col-sm-3">-->
+        <!--<p class="text-left">カテゴリ</p>-->
+    <!--</div>-->
+    <!--<div class="col-7 col-sm-9">-->
+        <!--<p>{{ post.get_study_choice_display|default_if_none:"未入力" }}</p>-->
+    <!--</div>-->
+<!--</div>-->
+
+
+<div class="row mb-3">
+    <div class="col-5 col-sm-3">
+        <p class="text-left">作成者</p>
+    </div>
+    <div class="col-7 col-sm-9">
+        <p>{{ post.created_by.get_full_name }}</p>
+    </div>
+</div>
+
+<div class="row mb-3">
+    <div class="col-5 col-sm-3">
+        <p class="text-left">作成時間</p>
+    </div>
+    <div class="col-7 col-sm-9">
+        <p>{{ post.created_at|date:"Y/m/d G:i:s" }}</p>
+    </div>
+</div>

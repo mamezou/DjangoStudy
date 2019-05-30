@@ -5,12 +5,12 @@
         <h2 class="text-center mb-4">投稿詳細</h2>
         <div class="card card-default">
             <div class="card-body">
-              {% include "./recipe_detail_contents.html" %}
+              {% include "./post_detail_contents.html" %}
             </div>
             <div class="card-footer text-center">
-                <a class="btn btn-primary" href="{% url 'accounts:recipe_update' object.pk %}">修正</a>
-                <a class="btn btn-danger" href="{% url 'accounts:recipe_delete' object.pk %}">削除</a>
-                <a class="btn" href="{% url 'accounts:recipe' %}">戻る</a>
+                <a class="btn btn-primary" href="{% url 'accounts:post_update' object.pk %}">修正</a>
+                <a class="btn btn-danger" href="{% url 'accounts:post_delete' object.pk %}">削除</a>
+                <a class="btn" href="{% url 'accounts:post' %}">戻る</a>
             </div>
         </div>
     </div>

@@ -219,7 +219,7 @@ class PostFilterView(generic.ListView):
     ビュー：フィルターのやつ
     """
     model = Post
-    template_name = 'accounts/recipe.html'
+    template_name = 'accounts/post.html'
 
     # 1ページの表示するコンテンツ数
     paginate_by = 10
@@ -239,7 +239,7 @@ class PostListView(generic.ListView):
     一覧ページ
     """
     model = Post
-    template_name = 'accounts/recipe.html'
+    template_name = 'accounts/post.html'
     paginate_by = 3
 
 
@@ -248,7 +248,7 @@ class PostDetailView(generic.DetailView):
     ビュー：詳細画面
     """
     model = Post
-    template_name = 'accounts/recipe_detail.html'
+    template_name = 'accounts/post_detail.html'
 
     def get_context_data(self, **kwargs):
         """
@@ -263,9 +263,9 @@ class PostCreateView(generic.CreateView):
     ビュー：登録画面
     """
     model = Post
-    template_name = 'accounts/recipe_create.html'
+    template_name = 'accounts/post_create.html'
     form_class = PostCreateForm
-    success_url = reverse_lazy('accounts:recipe')
+    success_url = reverse_lazy('accounts:post')
 
     def form_valid(self, form):
         """
@@ -283,7 +283,7 @@ class PostUpdateView(OnlyYouMixin, generic.UpdateView):
     """
     model = Post
     form_class = PostCreateForm
-    success_url = reverse_lazy('accounts:recipe')
+    success_url = reverse_lazy('accounts:post')
 
     def form_valid(self, form):
         """
@@ -301,7 +301,7 @@ class PostDeleteView(OnlyYouMixin, generic.DeleteView):
     """
     model = Post
     form_class = PostCreateForm
-    success_url = reverse_lazy('accounts:recipe')
+    success_url = reverse_lazy('accounts:post')
 
     def delete(self, request, *args, **kwargs):
         """

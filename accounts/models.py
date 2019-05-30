@@ -196,3 +196,74 @@ class Post(models.Model):
         verbose_name_plural = '投稿'
 
 
+# 試合結果投稿機能のデータベースです。
+# class MatchResultPost(models.Model):
+#     """
+#    　試合結果投稿クラス
+#    title
+#    opponent
+#    score
+#    (opponentscore)
+#    text
+#    image
+#     """
+#
+#     title = models.CharField(
+#         verbose_name='タイトル',
+#         max_length=20,
+#         blank=False,
+#         null=False,
+#     )
+#
+#     team = models.TextField(
+#         verbose_name='本文',
+#         blank=False,
+#         null=False,
+#     )
+#
+#     image = models.ImageField(
+#         upload_to='static/image/',
+#         verbose_name='画像',
+#         blank=True,
+#         null=True,
+#     )
+#
+#     date = models.DateTimeField(
+#         '日付',
+#         default=timezone.now,
+#     )
+#
+#     # 以下、管理項目
+#     # 作成者(ユーザー)
+#     created_by = models.ForeignKey(
+#         User,
+#         verbose_name='作成者',
+#         blank=True,
+#         null=True,
+#         related_name='CreatedBy',
+#         on_delete=models.SET_NULL,
+#         editable=False,
+#     )
+#
+#     # 投稿時間
+#     created_at = models.DateTimeField(
+#         verbose_name='作成時間',
+#         blank=True,
+#         null=True,
+#         editable=False,
+#         auto_now_add=True,
+#     )
+#
+#     def __str__(self):
+#         """
+#         リストボックスや管理画面での表示
+#         """
+#         return self.title
+#
+#     class Meta:
+#         """
+#         管理画面でのタイトル表示
+#         """
+#         verbose_name = '投稿'
+#         verbose_name_plural = '投稿'
+
